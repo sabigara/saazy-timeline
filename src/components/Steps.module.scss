@@ -1,0 +1,102 @@
+$rowHeight: 360px;
+$rowGap: 1rem;
+$circleSize: 1rem;
+
+.container {
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.column {
+  display: grid;
+  grid-auto-rows: $rowHeight;
+  row-gap: $rowGap;
+}
+
+.texts {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+  }
+
+  &__description {
+    color: var(--colors-gray-500);
+  }
+}
+
+.learnHowBtn {
+  display: flex;
+  align-items: center;
+  column-gap: 0.3rem;
+  color: var(--colors-accent-600);
+  font-weight: var(--font-weight-medium);
+  background-color: var(--colors-accent-50);
+  border-radius: var(--round-full);
+  padding: 0 0.5rem 0 1rem;
+  line-height: 2;
+
+  & > svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.feature {
+  &__list {
+    display: flex;
+    column-gap: 1rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    color: var(--colors-accent-600);
+    font-weight: var(--font-weight-medium);
+  }
+
+  &__check {
+    display: grid;
+    place-items: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--colors-accent-500);
+    color: var(--colors-white);
+    border-radius: var(--round-full);
+
+    & > svg {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+}
+
+.timeline {
+  padding-top: 1.25rem;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__circle {
+    width: $circleSize;
+    height: $circleSize;
+    border-radius: var(--round-full);
+    border: solid 1px var(--colors-accent-500);
+  }
+
+  &__line {
+    width: 1px;
+    height: calc($rowHeight + $rowGap - $circleSize);
+    background-color: var(--colors-accent-500);
+  }
+}
